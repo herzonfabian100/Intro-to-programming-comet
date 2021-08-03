@@ -36,6 +36,8 @@ header p {
 
 form {
     text-align: left;
+    display: block;
+    margin-top: 0em;
 }
 
 .navigation {
@@ -110,7 +112,7 @@ footer p {
 .label {
     color: gray;
     font-weight: 500;
-    margin: 0.25rem;
+    margin-bottom: 0.25rem;
     display: block;
 }
 
@@ -118,6 +120,19 @@ footer p {
     padding: 0.5rem 0.5rem;
     width: 100%;
     display: block;
+}
+
+.textarea {
+    display: block;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 32.5rem;
+}
+
+.fielinfo {
+    width: 15em;
+    display: inline-block;
+    margin-right: 2rem;
 }
 
 .buttonSubmit {

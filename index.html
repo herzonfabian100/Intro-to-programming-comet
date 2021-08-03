@@ -72,15 +72,23 @@
     <section>
         <h2><a>Leave a Message</a></h2>
         <form id="Form_Message" name="leave_message">
-            <label class="label" for="name">Name</label><br>
-            <input class="input" type="text" name="name" required><br>
-            <label class="label" for="email">Email</label><br>
-            <input class="input" type="email" name="email" required><br>
-            <label class="label" for="message">Message</label><br>
-            <textarea class="input" name="message" required>
-
+            <div class="fielinfo">
+                <label class="label" for="name">Name</label><br>
+                <input class="input" type="text" name="name" required><br>
+            </div>
+            <div class="fielinfo">
+                <label class="label" for="email">Email</label><br>
+                <input class="input" type="email" name="email" required><br>
+            </div>
+            <div class="textarea">
+                <label class="label" for="message">Message</label><br>
+                <textarea class="input" name="message" required>
             </textarea><br>
-            <button class="buttonSubmit" type="submit">Submit</button>
+            </div>
+            <div>
+                <button class="buttonSubmit" type="submit">Submit</button>
+            </div>
+
         </form>
 
     </section>
