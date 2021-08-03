@@ -20,6 +20,8 @@ console.log(messageForm);
 const submit = document.querySelector('button[type="submit"]');
 console.log(submit);
 
+
+
 function HideMessages() {
     document.getElementById("messages").style.visibility = "hidden";
 }
@@ -27,7 +29,10 @@ HideMessages();
 
 function ShowMessages() {
     document.getElementById("messages").style.visibility = "visible";
+
 }
+
+
 
 
 function ResetForm() {
@@ -35,6 +40,7 @@ function ResetForm() {
 }
 
 submit.addEventListener('click', ButtonElements);
+
 
 
 function ButtonElements(event) {
@@ -54,8 +60,17 @@ function ButtonElements(event) {
 
 
 
-    newMessage.innerHTML = (`<a href="malito:${email.value}">${name.value}</a><span>   Wrote: ${textarea.value}</span>`);
+    //Create message 
+    newMessage.innerHTML = `<div>
+        <span class="strong">${textarea.value}</span>
+        <p>${today.toLocaleString()} from <a class="link" href="mailto:${
+        email.value
+      }">${name.value}</a> &nbsp;</p>
+      </div>`;
     messageList.appendChild(newMessage);
+
+    //Create BUTTON
+
     const removeButton = document.createElement('BUTTON');
     removeButton.innerText = 'remove';
     removeButton.setAttribute('type', 'button');
@@ -68,5 +83,6 @@ function ButtonElements(event) {
         console.log(entry);
 
     }
+
     ResetForm();
 }

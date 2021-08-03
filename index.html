@@ -3,18 +3,25 @@
 
 <head>
     <title>Portfolio Fabian Aparicio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <meta name="description" content="Portfolio Fabian Aparicio">
 <meta name="keywords" content="HTML, JavaScript, Portfolio">
 <meta name="author" content="Fabian Aparicio">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
 
     <header>
-        <img src="img/logo.001.jpeg" alt="Logo" style="width:600px;height:200px;">
-        <h1 style="text-align: center;"><em>&nvrArr;Fabian Aparicio&nvlArr;</em></h1>
-        <p style="text-align: center;"> <strong>Born and raised in Bogota Colombia, passionate about knowledge, social equity and helping others.</strong></p>
-        <nav>
+        <section>
+            <img src="img/logo.001.jpeg" alt="Logo" class="responsiveImg">
+        </section>
+
+        <nav class="navigation">
 
             <ul>
                 <li><a href="#About">About Me</a></li>
@@ -25,67 +32,90 @@
     </header>
 
     <section>
-        <h2 style="text-align: center;"><a id="About">&nvHarr;About Me&nvHarr;</a></h2>
-        <p style="text-align:justify;">Over these last interesting years, full of challenges and new discoveries, as an entrepreneur and dedicated hard student, I've been passionate about everything related to the IT field and its different branches, which helps shape the world in
+        <h2><a id="About">About Me</a></h2>
+        <p> <strong>Born and raised in Bogota Colombia, passionate about knowledge, social equality and helping others.</strong></p>
+        <p>Over these last interesting years, full of challenges and new discoveries, as an entrepreneur and dedicated hard student, I've been passionate about everything related to the IT field and its different branches, which helps shape the world in
             connection to generate amazing benefits for the human being, creating innovative and also different tools that create and evolutionary aspects to improve our daily tasks. All these aspects contributed to my dedication to building different
             projects focused on the customer's needs so that they can connect with the world.</p>
     </section>
-    <section>
-        <h2 style="text-align: center" ;><a id="Experience">&nvHarr;Experience&nvHarr;</a></h2>
+    <section id="Experience">
+        <h2><a>Experience</a></h2>
 
-        <ul>
-            <li>Created web site with Html</li>
-            <li>Colaborated over GITHUB</li>
-            <li>Supported Computer Applications</li>
-            <li>Supported G-Suit</li>
+        <ul style="padding: 0em;">
+
+            <il class="ExperinceList"><span><strong>Desktop Support</strong>
+                " --Grupo Aval "
+                </span>
+                <span class="emphasis">Apr 2019 - Oct 2020</span>
+            </il>
+            <il class="ExperinceList"><span><strong>Web Designer</strong>
+                " --BitWise "
+            </span>
+                <span class="emphasis">Dec 2020 - Apr 2021</span>
+            </il>
         </ul>
 
     </section>
     <section>
         <section id="skills1">
-            <h2 style="text-align: center;"> &nvHarr;Skills&nvHarr;</h2>
+            <h2> Skills</h2>
 
-            <ul>
+            <ul style="padding: 0em;">
 
             </ul>
 
 
 
         </section>
-        <h2 style="text-align: center;"><a id="Connect">&nvHarr;Connect&nvHarr;</a></h2>
-        <ul>
-            <li><strong>Email :</strong><a href="mailto:herzonfabian100@gmail.com">herzonfabian100@gmail.com</a></li>
 
-            <li><a href="https://github.com/herzonfabian100">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/herzon-fabian-aparicio-zabala-3b1733132/">LinkedLn</a></li>
-            <li><a href="https://www.facebook.com">Facebook</a></li>
+    </section>
+    <section>
+        <h2><a>Leave a Message</a></h2>
+        <form id="Form_Message" name="leave_message">
+            <label class="label" for="name">Name</label><br>
+            <input class="input" type="text" name="name" required><br>
+            <label class="label" for="email">Email</label><br>
+            <input class="input" type="email" name="email" required><br>
+            <label class="label" for="message">Message</label><br>
+            <textarea class="input" name="message" required>
+
+            </textarea><br>
+            <button class="buttonSubmit" type="submit">Submit</button>
+        </form>
+
+    </section>
+    <section id="messages">
+        <h2><a>Messages</a></h2>
+        <ul>
 
         </ul>
 
     </section>
     <section>
-        <h2 style="text-align: center" ;><a>&nvHarr;Leave a Message&nvHarr;</a></h2>
-        <form id="Form_Message" style="text-align: center;" name="leave_message">
-            <label for="name">Name</label><br>
-            <input type="text" name="name" required><br>
-            <label for="email">Email</label><br>
-            <input type="email" name="email" required><br>
-            <label for="message">Message</label><br>
-            <textarea name="message" required>
 
-            </textarea><br>
-            <button type="submit">Submit</button>
-        </form>
+        <h2><a id="Connect">Contact Me</a></h2>
+        <div class="ConnectEffect">
+            <ul>
+                <li><strong></strong>
+                    <a href="mailto:herzonfabian100@gmail.com" class="fa fa-envelope"></a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/herzonfabian100" class="fa fa-github"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/herzon-fabian-aparicio-zabala-3b1733132/" class="fa fa-linkedin"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                </li>
+
+            </ul>
+        </div>
 
     </section>
-    <section id="messages">
-        <h2 style="text-align: center" ;><a>&nvHarr;Messages&nvHarr;</a></h2>
-        <ul>
 
-        </ul>
-
-    </section>
-    <footer style="text-align: center;"></footer>
+    <footer></footer>
     <script src="js/index.js">
     </script>
 </body>
