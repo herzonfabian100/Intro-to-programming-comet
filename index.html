@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head id="About">
     <title>Portfolio Fabian Aparicio</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,111 +17,157 @@
 <body>
 
     <header>
-        <section>
-            <img src="img/logo.001.jpeg" alt="Logo" class="responsiveImg">
-        </section>
 
-        <nav class="navigation">
+        <div class="flex-container">
+            <div>
+                <img src="img/logo.001.jpeg" alt="Logo" class="responsiveImg">
+            </div>
+            <div>
 
-            <ul>
-                <li><a href="#About">About Me</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Connect">Connect</a></li>
-            </ul>
-        </nav>
+                <nav class="navigation">
+
+                    <ul>
+                        <li><a href="#About">About Me</a></li>
+                        <li><a href="#Experience">Experience</a></li>
+                        <li><a href="#skillslink">Skills</a></li>
+                        <li><a href="#connectlink">Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+
+
+
     </header>
 
-    <section>
-        <h2><a id="About">About Me</a></h2>
-        <p> <strong>Born and raised in Bogota Colombia, passionate about knowledge, social equality and helping others.</strong></p>
-        <p>Over these last interesting years, full of challenges and new discoveries, as an entrepreneur and dedicated hard student, I've been passionate about everything related to the IT field and its different branches, which helps shape the world in
-            connection to generate amazing benefits for the human being, creating innovative and also different tools that create and evolutionary aspects to improve our daily tasks. All these aspects contributed to my dedication to building different
-            projects focused on the customer's needs so that they can connect with the world.</p>
+    <section id="Experience" class="sectionEffect">
+        <h2><a>About Me</a></h2>
+        <div>
+
+            <p> <strong>Born and raised in Bogota Colombia, passionate about knowledge, social equality and helping others.</strong></p>
+            <p>Over these last interesting years, full of challenges and new discoveries, as an entrepreneur and dedicated hard student, I've been passionate about everything related to the IT field and its different branches, which helps shape the world
+                in connection to generate amazing benefits for the human being, creating innovative and also different tools that create and evolutionary aspects to improve our daily tasks. All these aspects contributed to my dedication to building different
+                projects focused on the customer's needs so that they can connect with the world.</p>
+        </div>
+
     </section>
-    <section id="Experience">
+
+    <section id="skillslink">
         <h2><a>Experience</a></h2>
+        <div class="sectionEffect">
 
-        <ul style="padding: 0em;">
-
-            <il class="ExperinceList"><span><strong>Desktop Support</strong>
-                " --Grupo Aval "
-                </span>
-                <span class="emphasis">Apr 2019 - Oct 2020</span>
-            </il>
-            <il class="ExperinceList"><span><strong>Web Designer</strong>
-                " --BitWise "
-            </span>
-                <span class="emphasis">Dec 2020 - Apr 2021</span>
-            </il>
-        </ul>
-
-    </section>
-    <section>
-        <section id="skills1">
-            <h2> Skills</h2>
 
             <ul style="padding: 0em;">
 
+                <il class="ExperinceListFlex"><span><strong>Desktop Support</strong>
+                    " --Grupo Aval "
+                    </span>
+                    <span class="emphasis">Apr 2019 - Oct 2020</span>
+                </il>
+                <il class="ExperinceListFlex"><span><strong>Web Designer</strong>
+                    "--BitWise "
+                </span>
+                    <span class="emphasis">Dec 2020 - Apr 2021</span>
+                </il>
             </ul>
+        </div>
 
 
+    </section>
+
+    <section id="connectlink">
+        <section id="skills1">
+            <h2> Skills</h2>
+            <div id="Connect" class="sectionEffect">
+
+
+                <ul style="padding: 0em;">
+
+                </ul>
+            </div>
 
         </section>
 
     </section>
     <section>
-        <h2><a>Leave a Message</a></h2>
-        <form id="Form_Message" name="leave_message">
-            <div class="fielinfo">
-                <label class="label" for="name">Name</label><br>
-                <input class="input" type="text" name="name" required><br>
+        <h2><a>Connect With Me</a></h2>
+        <div class="flex-container">
+
+            <div class="classConnectwith">
+                <section>
+
+                    <div class="sectionEffect">
+
+                        <form id="Form_Message" name="leave_message">
+                            <div class="container">
+                                <div class="fielinfo">
+                                    <label class="label" for="name">Name</label><br>
+                                    <input class="input" type="text" name="name" required><br>
+                                </div>
+                                <div class="fielinfo">
+                                    <label class="label" for="email">Email</label><br>
+                                    <input class="input" type="email" name="email" required><br>
+                                </div>
+                                <div class="fielinfo">
+                                    <label class="label" for="message">Message</label><br>
+                                    <textarea class="input" name="message" required>
+                            </textarea><br>
+                                </div>
+                                <div class="fielinfo">
+                                    <button class="buttonSubmit" type="submit">Submit</button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </section>
+
             </div>
-            <div class="fielinfo">
-                <label class="label" for="email">Email</label><br>
-                <input class="input" type="email" name="email" required><br>
-            </div>
-            <div class="textarea">
-                <label class="label" for="message">Message</label><br>
-                <textarea class="input" name="message" required>
-            </textarea><br>
-            </div>
-            <div>
-                <button class="buttonSubmit" type="submit">Submit</button>
+            <div class="classConnectwith">
+                <section>
+
+
+                    <div class="ConnectEffect">
+
+                        <ul>
+                            <li><strong></strong>
+                                <a href="mailto:herzonfabian100@gmail.com" class="fa fa-envelope"></a>
+                            </li>
+
+                            <li>
+                                <a href="https://github.com/herzonfabian100" class="fa fa-github"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/herzon-fabian-aparicio-zabala-3b1733132/" class="fa fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </section>
             </div>
 
-        </form>
+        </div>
 
     </section>
+
     <section id="messages">
-        <h2><a>Messages</a></h2>
-        <ul>
-
-        </ul>
-
-    </section>
-    <section>
-
-        <h2><a id="Connect">Contact Me</a></h2>
-        <div class="ConnectEffect">
+        <div class="sectionEffect">
+            <h2><a>Messages</a></h2>
             <ul>
-                <li><strong></strong>
-                    <a href="mailto:herzonfabian100@gmail.com" class="fa fa-envelope"></a>
-                </li>
-
-                <li>
-                    <a href="https://github.com/herzonfabian100" class="fa fa-github"></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/herzon-fabian-aparicio-zabala-3b1733132/" class="fa fa-linkedin"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
-                </li>
 
             </ul>
         </div>
 
     </section>
+
 
     <footer></footer>
     <script src="js/index.js">
