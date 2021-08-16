@@ -223,11 +223,11 @@ div .fielinfo {
 
 /* Responsive form - fix the flexbox in small screens  */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 797px) {
     input,
     .input,
     textarea {
-        width: 80%;
+        width: 83.5%;
     }
     .ConnectEffect ul {
         margin: 0px;
