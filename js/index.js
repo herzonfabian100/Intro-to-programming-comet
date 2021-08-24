@@ -86,3 +86,35 @@ function ButtonElements(event) {
 
     ResetForm();
 }
+//Display Projects in GitHub
+const githubRequest = new XMLHttpRequest();
+
+githubRequest.onreadystatechange = function() {
+    if (githubRequest.readyState === 4 && githubRequest.status === 200) {
+        var repositories = JSON.parse(this.response);
+        console.log(repositories);
+
+        var projectSection = document.querySelector('#projects');
+        var projectList = projectSection.getElementsByTagName('ul')[0];
+
+        for (let i = 0; i < repositories.length; i += 1) {
+            let project = document.createElement("li");
+            let UrlRepo = document.createElement("a");
+            UrlRepo.href = repositories[i].html_url;
+            //project.innerText = $repositories[i].name " Date " created_at;
+            project.innerHTML = `<div>
+            <span class="strong"> ${repositories[i].name }</span>
+            <span> Created  :  ${ new Date(repositories[i].created_at).toDateString()}</span>
+            </div>`;
+            UrlRepo.appendChild(project);
+            projectList.appendChild(UrlRepo);
+
+
+
+        }
+
+
+    }
+};
+githubRequest.open('GET', 'https://api.github.com/users/herzonfabian100/repos');
+githubRequest.send();
