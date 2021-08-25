@@ -70,13 +70,18 @@ footer p {
     margin-left: 0.5rem;
 }
 
-.ExperinceListFlex {
+.ExperinceListFlex,
+.ProjectsListFlex li {
     background-color: lightgrey;
     border-radius: 2px;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.ProjectsListFlex li {
+    color: dimgray;
 }
 
 .emphasis {

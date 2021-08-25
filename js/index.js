@@ -94,21 +94,25 @@ githubRequest.onreadystatechange = function() {
         var repositories = JSON.parse(this.response);
         console.log(repositories);
 
+
         var projectSection = document.querySelector('#projects');
         var projectList = projectSection.getElementsByTagName('ul')[0];
 
         for (let i = 0; i < repositories.length; i += 1) {
             let project = document.createElement("li");
             let UrlRepo = document.createElement("a");
-            UrlRepo.href = repositories[i].html_url;
-            //project.innerText = $repositories[i].name " Date " created_at;
-            project.innerHTML = `<div>
-            <span class="strong"> ${repositories[i].name }</span>
-            <span> Created  :  ${ new Date(repositories[i].created_at).toDateString()}</span>
-            </div>`;
-            UrlRepo.appendChild(project);
-            projectList.appendChild(UrlRepo);
 
+            if (new Date(repositories[i].created_at) > new Date(2021, 02, 22, 10, 33, 30, 0)) {
+
+                UrlRepo.href = repositories[i].html_url;
+                //project.innerText = $repositories[i].name " Date " created_at;
+                project.innerHTML = `<div>
+                <span class="strong"> ${repositories[i].name }</span>
+                <span> Created  :  ${ new Date(repositories[i].created_at).toDateString()}</span><br><p>${repositories[i].description }</p>
+                </div>`;
+                UrlRepo.appendChild(project);
+                projectList.appendChild(UrlRepo);
+            }
 
 
         }
