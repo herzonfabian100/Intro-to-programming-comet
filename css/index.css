@@ -84,6 +84,11 @@ footer p {
     color: dimgray;
 }
 
+.ProjectsListFlex p {
+    color: dimgray;
+    font-size: 14px;
+}
+
 .emphasis {
     font-style: italic;
     color: rgb(165, 164, 164);
