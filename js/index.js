@@ -86,39 +86,53 @@ function ButtonElements(event) {
 
     ResetForm();
 }
-//Display Projects in GitHub
-const githubRequest = new XMLHttpRequest();
+//Display Projects in GitHub with Fetch
+fetchData('https://api.github.com/users/herzonfabian100/repos')
 
-githubRequest.onreadystatechange = function() {
-    if (githubRequest.readyState === 4 && githubRequest.status === 200) {
-        var repositories = JSON.parse(this.response);
-        console.log(repositories);
+function fetchData(url) {
+    return fetch(url)
+        .then(checkStatus)
+        .then(response => response.json())
+        .then(data => githubRequest(data))
+        .catch((error) => {
+            console.error("Error:", error);
+        })
+}
+
+function checkStatus(response) {
+    if (response.ok) {
+        return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText))
+    }
+}
 
 
-        var projectSection = document.querySelector('#projects');
-        var projectList = projectSection.getElementsByTagName('ul')[0];
 
-        for (let i = 0; i < repositories.length; i += 1) {
-            let project = document.createElement("li");
-            let UrlRepo = document.createElement("a");
 
-            if (new Date(repositories[i].created_at) > new Date(2021, 02, 22, 10, 33, 30, 0)) {
 
-                UrlRepo.href = repositories[i].html_url;
-                //project.innerText = $repositories[i].name " Date " created_at;
-                project.innerHTML = `<div>
-                <span class="strong"> ${repositories[i].name }</span>
-                <span> Created  :  ${ new Date(repositories[i].created_at).toDateString()}</span><br><p>${repositories[i].description }</p>
+function githubRequest(repositoriesData) {
+    var projectSection = document.querySelector('#projects');
+    var projectList = projectSection.getElementsByTagName('ul')[0];
+
+    for (let i = 0; i < repositoriesData.length; i += 1) {
+        let project = document.createElement("li");
+        let UrlRepo = document.createElement("a");
+
+        if (new Date(repositoriesData[i].created_at) > new Date(2021, 02, 22, 10, 33, 30, 0)) {
+
+            UrlRepo.href = repositoriesData[i].html_url;
+            //project.innerText = $repositoriesData[i].name " Date " created_at;
+            project.innerHTML = `<div>
+                <span class="strong"> ${repositoriesData[i].name }</span>
+                <span> Created  :  ${ new Date(repositoriesData[i].created_at).toDateString()}</span><br><p> Description : ${repositoriesData[i].description }</p>
                 </div>`;
-                UrlRepo.appendChild(project);
-                projectList.appendChild(UrlRepo);
-            }
-
-
+            UrlRepo.appendChild(project);
+            projectList.appendChild(UrlRepo);
         }
 
 
     }
-};
-githubRequest.open('GET', 'https://api.github.com/users/herzonfabian100/repos');
-githubRequest.send();
+
+
+}
